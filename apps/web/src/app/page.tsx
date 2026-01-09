@@ -4,7 +4,7 @@ export default function Page() {
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <h1 className="text-4xl font-bold">Hello World - postry.ai</h1>
         <p className="mt-4 text-xl text-gray-600">
-          Votre Jumeau Numérique est en cours d'initialisation...
+          Votre Jumeau Numérique est en cours d&apos;initialisation...
         </p>
       </div>
     </main>
