@@ -1,11 +1,19 @@
-// @vitest-environment jsdom
-import React from 'react';
-import { expect, test } from 'vitest';
+import { expect, test, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/vitest';
 import Page from './page';
 
-test('Page renders correctly', () => {
-  render(<Page />);
-  expect(screen.getByText(/Hello World - postry.ai/i)).toBeInTheDocument();
+// Mock Supabase client
+vi.mock('@/lib/supabase/server', () => ({
+  createClient: vi.fn(() => ({
+    auth: {
+      getUser: vi.fn(() => Promise.resolve({ data: { user: null } })),
+    },
+  })),
+}));
+
+test('Page renders correctly', async () => {
+  const ResolvedPage = await Page();
+  render(ResolvedPage);
+  expect(screen.getByText(/postry.ai/i)).toBeInTheDocument();
 });
