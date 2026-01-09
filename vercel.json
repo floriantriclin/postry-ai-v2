@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "public": false,
-  "buildCommand": "pnpm turbo run build --filter=web",
-  "installCommand": "pnpm install",
-  "framework": "nextjs",
-  "outputDirectory": "apps/web/.next"
-}
