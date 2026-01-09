@@ -1,0 +1,16 @@
+{
+  "name": "@postry/database",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./index.ts",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "supabase:gen": "supabase gen types typescript --local > types.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
