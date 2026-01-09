@@ -11,9 +11,9 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "next": "16.0.0-canary.0",
-    "react": "rc",
-    "react-dom": "rc",
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "@postry/shared-types": "workspace:*",
     "@postry/database": "workspace:*",
     "@postry/ai-engine": "workspace:*",
@@ -25,8 +25,8 @@
   "devDependencies": {
     "typescript": "^5.0.0",
     "@types/node": "^20.0.0",
-    "@types/react": "rc",
-    "@types/react-dom": "rc",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "tailwindcss": "4.0.0-alpha.25",
     "@tailwindcss/postcss": "4.0.0-alpha.25",
     "postcss": "^8.0.0",
