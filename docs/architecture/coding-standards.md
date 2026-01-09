@@ -2,11 +2,22 @@
 
 Ces règles visent à garantir un code propre, typé et performant sur Vercel et Supabase.
 
-## Langages et Frameworks
+## Versions
 
+- **React 19 :** Utiliser la version stable de React 19.
+- **Next.js 15 :** Utiliser la version stable de Next.js 15 (ne pas utiliser @rc ou canary).
 - **TypeScript 5.x+ :** Typage strict obligatoire (strict: true). Aucun type any n'est autorisé.
-- **Next.js 16 (App Router) :** Utiliser les *Server Components* par défaut. N'utiliser 'use client' que lorsque l'interactivité (Framer Motion, formulaires) le nécessite.
 - **Tailwind CSS 4 :** Utiliser exclusivement les classes utilitaires pour le styling. Pas de CSS-in-JS ou de fichiers CSS séparés (sauf pour les variables globales).
+
+## Linter
+
+- **ESLint 9 Flat Config :** Obligation d'utiliser la nouvelle configuration "Flat Config" via le fichier `eslint.config.mjs`.
+
+## Tests
+
+- **Vitest :** Utiliser Vitest pour tous les tests unitaires et d'intégration.
+- **Configuration :** La configuration doit inclure `jsdom` pour l'environnement de test et `@vitejs/plugin-react` pour le support de React.
+- **Localisation :** Chaque nouveau composant UI doit avoir un fichier de test associé dans le même dossier.
 
 ## Conventions de Nommage
 
@@ -26,4 +37,3 @@ Ces règles visent à garantir un code propre, typé et performant sur Vercel et
 
 - **Zéro Console :** Ne jamais utiliser console.log en production. Utiliser un utilitaire de logging si nécessaire.
 - **Commentaires JSDoc :** Chaque fonction complexe (notamment l'algorithme de dé-lissage) doit être documentée avec JSDoc pour expliquer sa logique.
-- **Tests :** Chaque nouveau composant UI doit avoir un fichier de test Vitest associé dans le même dossier.
