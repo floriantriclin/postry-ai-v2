@@ -18,5 +18,12 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
+  "files": [],
+  "references": [
+    { "path": "./apps/web" },
+    { "path": "./packages/shared-types" },
+    { "path": "./packages/ai-engine" },
+    { "path": "./packages/database" }
+  ],
   "exclude": ["node_modules"]
 }
